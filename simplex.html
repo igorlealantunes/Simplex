@@ -1,0 +1,89 @@
+<!-- <script src="simplex.js"></script> -->
+
+<script src="Simplex.js"></script>
+
+<script>
+	
+	// console.log("working");
+
+	// let table = build_table()
+
+	
+
+	// //alert("Starting script");
+
+	// console.log("Table, ", table)
+
+	// let iteration = 1;
+	// while(true)
+	// {	
+
+	// 	console.log("Iteration :" + iteration++);
+
+	// 	// checks is Z has negative numbers
+	// 	if(has_finished(table))
+	// 	{	
+	// 		console.log("FINISHED!!!");
+	// 		break;
+	// 	}
+
+	// 	let col_pivo = get_col_pivo(table);
+
+	// 	let linha_pivo = get_linha_pivo(table, col_pivo);
+
+	// 	let number_pivo = get_number_pivo(table, linha_pivo, col_pivo);
+
+	// 	build_new_row(table, linha_pivo, col_pivo);
+
+	// 	update_table(table, linha_pivo, col_pivo)
+
+	// 	console.log("Table, ", table)
+	// 	console.log("col_pivo", col_pivo)
+	// 	console.log("linha_pivo", linha_pivo)
+	// 	console.log("number_pivo", number_pivo)
+	// }
+
+	// //console.log(table.toString());
+
+	// console.log(table)
+</script>
+
+<script>
+	const instance1 = {
+
+		eq : [10, 20, 30],
+		
+		restr : [ 
+		
+			{ left: [ 2, 2, 4], right: 300 },
+			{ left: [ 0, 4, 3 ], right: 200 },
+			{ left: [ 1 , 0 , 0], right: 20 },
+			{ left: [ 4, 3, 0 ], right: 50 },		
+		]
+	}
+
+
+	const instance2 = {
+			eq : [3, 5],
+
+			restr : [ 
+					{ left: [ 1, 0], right: 4 },
+					{ left: [ 0, 2 ], right: 12 },
+					{ left: [ 3, 2], right: 18 }
+				]
+		};
+
+	const simplex = new Simplex(instance1);
+	simplex.run();
+
+
+	console.log("Final table: ", simplex.table);
+</script>
+
+
+	
+
+
+
+
+
